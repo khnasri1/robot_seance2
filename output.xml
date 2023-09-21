@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230921 16:40:28.283" rpa="false" schemaversion="4">
+<suite id="s1" name="Loginhrm" source="c:\Users\2335963\Desktop\seance2\loginhrm.robot">
+<test id="s1-t1" name="tc01 login Test" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230921 16:40:28.506" level="INFO">Opening browser 'edge' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg timestamp="20230921 16:40:29.222" level="WARN">The msedgedriver version (116.0.1938.76) detected in PATH at C:\Users\2335963\AppData\Local\Programs\Python\Python311\msedgedriver.exe might not be compatible with the detected edge version (117.0.2045.36); currently, msedgedriver 117.0.2045.36 is recommended for edge 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230921 16:40:28.505" endtime="20230921 16:40:37.773"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230921 16:40:37.775" endtime="20230921 16:40:37.909"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 16:40:40.915" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 16:40:37.909" endtime="20230921 16:40:40.915"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230921 16:40:40.919" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20230921 16:40:40.917" endtime="20230921 16:40:41.041"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230921 16:40:41.042" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20230921 16:40:41.078" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230921 16:40:41.159" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230921 16:40:41.041" endtime="20230921 16:40:41.159"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class:oxd-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230921 16:40:41.159" level="INFO">Clicking button 'class:oxd-button'.</msg>
+<status status="PASS" starttime="20230921 16:40:41.159" endtime="20230921 16:40:42.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 16:40:45.185" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 16:40:42.184" endtime="20230921 16:40:45.185"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>Xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230921 16:40:45.185" level="INFO">Verifying element 'Xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6' contains exact text 'Dashboard'.</msg>
+<status status="PASS" starttime="20230921 16:40:45.185" endtime="20230921 16:40:45.217"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://p[@class="oxd-userdropdown-name"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230921 16:40:45.219" level="INFO">Clicking element 'Xpath://p[@class="oxd-userdropdown-name"]'.</msg>
+<status status="PASS" starttime="20230921 16:40:45.219" endtime="20230921 16:40:45.261"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 16:40:48.261" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 16:40:45.261" endtime="20230921 16:40:48.262"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Link:Logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230921 16:40:48.265" level="INFO">Clicking element 'Link:Logout'.</msg>
+<status status="PASS" starttime="20230921 16:40:48.264" endtime="20230921 16:40:48.865"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 16:40:51.867" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 16:40:48.866" endtime="20230921 16:40:51.867"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class:oxd-button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230921 16:40:51.931" level="INFO">Element 'class:oxd-button' is displayed.</msg>
+<status status="PASS" starttime="20230921 16:40:51.867" endtime="20230921 16:40:51.931"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230921 16:40:51.931" endtime="20230921 16:40:54.174"/>
+</kw>
+<status status="PASS" starttime="20230921 16:40:28.504" endtime="20230921 16:40:54.175"/>
+</test>
+<status status="PASS" starttime="20230921 16:40:28.287" endtime="20230921 16:40:54.179"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Loginhrm">Loginhrm</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230921 16:40:29.222" level="WARN">The msedgedriver version (116.0.1938.76) detected in PATH at C:\Users\2335963\AppData\Local\Programs\Python\Python311\msedgedriver.exe might not be compatible with the detected edge version (117.0.2045.36); currently, msedgedriver 117.0.2045.36 is recommended for edge 117.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
